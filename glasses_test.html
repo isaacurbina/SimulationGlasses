@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta http-equiv="content-type" content="text/php; charset=utf-8" />
+		<meta content="width=device-width, initial-scale=1.0, user-scalable= 0" name="viewport">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <title>Simulation Glasses</title>
+        <style media="screen" type="text/css">
+
+		.glasses {
+			-webkit-perspective: 600px;
+			width: 100%;
+			height: 100%;
+			min-height: 300px;
+			-webkit-transform: rotateX(-20deg) rotateY(0deg) rotateZ(0deg) scale(0.6);
+			-webkit-transform-style: preserve-3d;
+			-webkit-transition-duration: 800ms;
+			-webkit-transform-origin: 50% 50%;
+		}
+
+		.glasses .side {
+			-webkit-transform-style: preserve-3d;
+			height: 100%;
+    		width: 100%;
+    		font-size: 32px;
+    		position: absolute;
+    		opacity: 0.5;
+		}
+
+		.glasses .side.left {
+			background-color: blue;
+			-webkit-transform: rotateY(-90deg) scaleX(1);
+			-webkit-transform-origin: 0% 50%;
+		}
+
+		.glasses .side.right {
+			background-color: green;
+			-webkit-transform: rotateY(90deg) scaleX(1);
+			-webkit-transform-origin: 100% 50%;
+		}
+
+		.glasses .side.front {
+			background-color: red;
+			-webkit-transform: rotateY(0deg) scaleX(1);
+			-webkit-transform-origin: 50% 50%;
+		}
+
+		</style>
+    </head>
+	<body style="display:block;">
+		<div class="glasses">
+	        <div class="side left">
+	            LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT LEFT
+	        </div>
+	        <div class="side front">
+	        	<img src="ui/left.svg" style="width:100%;height:100%;position:fixed;top:0;left:0;bottom:0;right:0;" />
+	            FRONT FRONT FRONT FRONT FRONT FRONT FRONT FRONT FRONT
+	            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="595.28px" height="841.89px" viewBox="0 0 595.28 841.89" enable-background="new 0 0 595.28 841.89" xml:space="preserve" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+	            	<g xmlns="http://www.w3.org/2000/svg" id="Front">
+						<g>
+							<g>
+								<path fill="#FFFFFF" d="M498.002,0H250.796h-0.126H3.463L2.796,93.333H36.13c0,0,5,0.334,7,3.668c2,3.332,0.75,6.166,7,10     c6.25,3.832,153.333,0.666,153.333,0.666s6.39-0.233,12-4.666s5.891-3.105,9.667-12.668s6.333-17,9.666-19.333     c3.334-2.333,15-5,15-5h0.874c0,0,12.666,2.667,16,5s5.891,9.771,9.666,19.333s4.057,8.235,9.666,12.668     c5.611,4.433,12,4.666,12,4.666s147.084,3.166,153.334-0.666c6.25-3.834,5-6.668,7-10c2-3.334,7-3.668,7-3.668h33.334L498.002,0z      M196.629,71.997c-7.72,14.108-26,15.333-26,15.333l-65.667,0.17c0,0-16.667,0.832-22-15.502c-5.333-16.334-1.333-40.333,2-45     s11.662-13.814,28.667-13.334l59-0.333c0,0,19.667,1,24,16S200.296,61.997,196.629,71.997z M418.504,71.997     c-5.332,16.334-22,15.502-22,15.502l-65.666-0.17c0,0-18.281-1.224-26-15.333c-3.668-10-4.334-27.667,0-42.667     c4.332-15,24-16,24-16l59,0.333c17.004-0.48,25.332,8.667,28.666,13.334S423.838,55.663,418.504,71.997z"/>
+							</g>
+							<g>
+								<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M498.002,0H250.796h-0.126H3.463L2.796,93.333H36.13     c0,0,5,0.334,7,3.668c2,3.332,0.75,6.166,7,10c6.25,3.832,153.333,0.666,153.333,0.666s6.39-0.233,12-4.666     s5.891-3.105,9.667-12.668s6.333-17,9.666-19.333c3.334-2.333,15-5,15-5h0.874c0,0,12.666,2.667,16,5s5.891,9.771,9.666,19.333     s4.057,8.235,9.666,12.668c5.611,4.433,12,4.666,12,4.666s147.084,3.166,153.334-0.666c6.25-3.834,5-6.668,7-10     c2-3.334,7-3.668,7-3.668h33.334L498.002,0z M196.629,71.997c-7.72,14.108-26,15.333-26,15.333l-65.667,0.17     c0,0-16.667,0.832-22-15.502c-5.333-16.334-1.333-40.333,2-45s11.662-13.814,28.667-13.334l59-0.333c0,0,19.667,1,24,16     S200.296,61.997,196.629,71.997z M418.504,71.997c-5.332,16.334-22,15.502-22,15.502l-65.666-0.17c0,0-18.281-1.224-26-15.333     c-3.668-10-4.334-27.667,0-42.667c4.332-15,24-16,24-16l59,0.333c17.004-0.48,25.332,8.667,28.666,13.334     S423.838,55.663,418.504,71.997z"/>
+							</g>
+						</g>
+					</g>
+	            </svg>
+	        </div>
+	        <div class="side right">
+	            RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT RIGHT
+	        </div>
+	    </div>
+	</body>
+</html>

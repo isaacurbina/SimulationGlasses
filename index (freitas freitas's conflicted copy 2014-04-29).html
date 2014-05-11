@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/php; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, user-scalable= 0" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Simulation Glasses</title>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>-->
+    <script src="eBlurry/static/jquery-1.7.1.js"></script>
+    <script src="underscore-min.js"></script>
+    <script src="bootstrap-3.1.1/js/bootstrap.js"></script>
+
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+    <script src="StackBlur.js" type="text/javascript"></script>
+    <script src="html2canvas.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="bootstrap-3.1.1/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="animation.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+<body style="display:block;">
+    <div class="header row">
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <div class="input-group">
+                <input type="text" id="url" class="form-control">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" id="btn" type="button">Go!</button>
+                </span>
+            </div>
+        </div>
+        <div class="btn-group col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <button class="btn btn-default dropdown-toggle glasses-selector" type="button" data-toggle="dropdown">
+                Glasses
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Level 3</a>
+                </li>
+                <li><a href="#">Level 2</a>
+                </li>
+                <li><a href="#">Level 1</a>
+                </li>
+                <li class="divider"></li>
+                <li><a href="#">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="iframe_container">
+        <iframe src="http://www.inclusivedesigntoolkit.com/betterdesign2/csg/csg.html" id="iframe" frameBorder="0">
+        </iframe>
+    </div>
+
+    <div id="blur_controls">
+        <img src="ui/more_blur2.png" id="more_blur">
+        <img src="ui/less_blur2.png" id="less_blur">
+    </div>
+    <!--
+    <div id="menu">
+        <div id="scroll_menu">
+            <div id="logo_container">
+                <img id="logo" src="ui/edc_logo.png" />
+                <img src="ui/shadow.png" class="shadow" />
+            </div>
+            <p>Type the URL:</p>
+            <input type="text" name="url" id="url">
+            <button name="go_btn" id="go_btn">PREVIEW</button>
+        </div>
+        <img src="ui/shadow.png" id="shadow" />
+        <img src="ui/drag.png" id="drag" />
+    </div>
+    -->
+    <div id="glasses_container">
+        <div class="glasses broke-endless-pages down">
+            <div class="side left">
+                <img src="ui/right.svg" style="width:100%;height:100%;position:fixed;top:0;left:0;bottom:0;right:0;" />
+                <!--
+		        	<img src="ui/glasses_left.png" width="100%" height="290px" />
+		        	-->
+                <!--
+		            <svg width="70%" height="600px" viewBox="0 0 100% 100%">
+					   <rect x="0" y="100" width="100%" height="100" style="fill: white;" />
+					</svg>
+					-->
+            </div>
+            <div class="side front">
+                <img src="ui/front.svg" style="width:100%;height:100%;position:fixed;top:0;left:0;bottom:0;right:0;" />
+                <!--
+		        	<img src="ui/glasses_front.png" width="100%" />
+		        	-->
+                <!--
+		        	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="1350px" height="313px" viewBox="0 0 595.28 841.89" enable-background="new 0 0 595.28 841.89" xml:space="preserve" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+			        	<g xmlns="http://www.w3.org/2000/svg" id="Front">
+							<g>
+								<g>
+									<path fill="#FFFFFF" d="M498.002,0H250.796h-0.126H3.463L2.796,93.333H36.13c0,0,5,0.334,7,3.668c2,3.332,0.75,6.166,7,10     c6.25,3.832,153.333,0.666,153.333,0.666s6.39-0.233,12-4.666s5.891-3.105,9.667-12.668s6.333-17,9.666-19.333     c3.334-2.333,15-5,15-5h0.874c0,0,12.666,2.667,16,5s5.891,9.771,9.666,19.333s4.057,8.235,9.666,12.668     c5.611,4.433,12,4.666,12,4.666s147.084,3.166,153.334-0.666c6.25-3.834,5-6.668,7-10c2-3.334,7-3.668,7-3.668h33.334L498.002,0z      M196.629,71.997c-7.72,14.108-26,15.333-26,15.333l-65.667,0.17c0,0-16.667,0.832-22-15.502c-5.333-16.334-1.333-40.333,2-45     s11.662-13.814,28.667-13.334l59-0.333c0,0,19.667,1,24,16S200.296,61.997,196.629,71.997z M418.504,71.997     c-5.332,16.334-22,15.502-22,15.502l-65.666-0.17c0,0-18.281-1.224-26-15.333c-3.668-10-4.334-27.667,0-42.667     c4.332-15,24-16,24-16l59,0.333c17.004-0.48,25.332,8.667,28.666,13.334S423.838,55.663,418.504,71.997z"/>
+								</g>
+								<g>
+									<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M498.002,0H250.796h-0.126H3.463L2.796,93.333H36.13     c0,0,5,0.334,7,3.668c2,3.332,0.75,6.166,7,10c6.25,3.832,153.333,0.666,153.333,0.666s6.39-0.233,12-4.666     s5.891-3.105,9.667-12.668s6.333-17,9.666-19.333c3.334-2.333,15-5,15-5h0.874c0,0,12.666,2.667,16,5s5.891,9.771,9.666,19.333     s4.057,8.235,9.666,12.668c5.611,4.433,12,4.666,12,4.666s147.084,3.166,153.334-0.666c6.25-3.834,5-6.668,7-10     c2-3.334,7-3.668,7-3.668h33.334L498.002,0z M196.629,71.997c-7.72,14.108-26,15.333-26,15.333l-65.667,0.17     c0,0-16.667,0.832-22-15.502c-5.333-16.334-1.333-40.333,2-45s11.662-13.814,28.667-13.334l59-0.333c0,0,19.667,1,24,16     S200.296,61.997,196.629,71.997z M418.504,71.997c-5.332,16.334-22,15.502-22,15.502l-65.666-0.17c0,0-18.281-1.224-26-15.333     c-3.668-10-4.334-27.667,0-42.667c4.332-15,24-16,24-16l59,0.333c17.004-0.48,25.332,8.667,28.666,13.334     S423.838,55.663,418.504,71.997z"/>
+								</g>
+							</g>
+						</g>
+					</svg>
+					->>
+		        	<!--
+		        	<svg width="100%" height="600px" viewBox="0 0 100% 100%">
+					   <rect x="0" y="100" width="100%" height="100" style="fill: white;" />
+					   <rect x="0" y="400" width="100%" height="100" style="fill: white;" />
+					   <rect x="0" y="100" width="10%" height="300" style="fill: white;" />
+					   <rect x="90%" y="100" width="10%" height="300" style="fill: white;" />
+					   <rect x="42%" y="100" width="16%" height="300" style="fill: white;" />
+					</svg>
+					-->
+            </div>
+            <div class="side right" style="text-align: right;">
+                <img src="ui/left.svg" style="width:100%;height:100%;position:fixed;top:0;left:0;bottom:0;right:0;" />
+                <!--
+		        	<img src="ui/glasses_right.png" width="100%" height="290px" />
+		            -->
+                <!--<svg width="70%" height="600px" viewBox="0 0 100% 100%">
+					   <rect x="0" y="100" width="100%" height="100" style="fill: white;" />
+					</svg>
+					-->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

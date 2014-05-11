@@ -1,8 +1,6 @@
 body {
-	/*font-family: 'Open Sans';*/
-	font-family: 'Noto Sans';
+	font-family: 'Open Sans';
 	font-size: 16px;
-	overflow-y: hidden;
 }
 
 p {
@@ -12,8 +10,7 @@ p {
 }
 
 input[type=text], button {
-	/*font-family: 'Open Sans';*/
-	font-family: 'Noto Sans';
+	font-family: 'Open Sans';
 	font-size: 16px;
 	margin-bottom: 10px;
 }
@@ -68,10 +65,9 @@ input[type=text], button {
 }
 
 .shadow {
-	max-width: 100%;
+	width: 100%;
 	margin-top: -5px;
 	margin-bottom: 0px;
-	display: block;
 }
 
 iframe {
@@ -87,6 +83,7 @@ iframe {
 	margin-bottom: 25px;
 	min-height: 35px;
 }
+
 
 #more_blur, #less_blur {
 	width: 40px;
@@ -122,29 +119,15 @@ iframe {
 }
 
 
-.header {
-	margin-top: 10px;
-	z-index: 100;
-	position: fixed;
-	background-color: white;
-	padding: auto;
-	text-align: center;
-	display: table-cell;
-    vertical-align:middle;
-    box-shadow: 15px 10px 20px 1px rgba(0, 0, 0, 0.12);
-    padding-left: 5%;
-    padding-right: 5%;
+.header{
+	height:50px;
+	padding: 8px;
 }
 
-#btn {
-	margin-bottom: 10px;
+.header button{
+    width: 100%;
 }
 
 #iframe_container{
 	top: 50px;
-}
-
-#btn_ddm {
-	display: block;
-	/*margin-top: 5px;*/
 }
