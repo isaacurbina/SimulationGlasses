@@ -1,0 +1,44 @@
+#glasses_container {
+    -webkit-perspective: 480px;
+    /*z-index: 50;*/
+}
+.glasses {
+    width: 100%;
+    height: 200%;
+    -webkit-transform: rotateY(0deg) rotateX(13deg) scale(.6);
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition-duration: 800ms;
+    position: absolute;
+    font-size: 84px;
+}
+
+.glasses.down {
+    /*-webkit-transform: rotateY(0deg) rotateX(90deg)
+    scale(.6)
+    translateY(149%) translateZ(-175px);*/
+    /*-webkit-transform: rotateY(0deg) rotateX(110deg) scale(.5) translateY(0%) translateZ(-275px);*/
+    -webkit-transform: rotateY(0deg) rotateX(110deg) scale(.2) translateY(0%) translateZ(-600px);
+}
+
+.glasses .side {
+    height: 100%;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    position: absolute;
+}
+
+.glasses .front {
+    background-color: green;
+}
+
+.glasses .side.left {
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a90329), color-stop(44%, #8f0222), color-stop(100%, #6d0019));*/
+    -webkit-transform: rotateY(-90deg) scaleX(0.25);
+    -webkit-transform-origin: 0% 50%;
+}
+
+.glasses .side.right {
+    -webkit-transform: rotateY(90deg) scaleX(.25);
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #1e5799), color-stop(50%, #2989d8), color-stop(51%, #207cca), color-stop(100%, #7db9e8));*/
+    -webkit-transform-origin: 100% 50%;
+}
