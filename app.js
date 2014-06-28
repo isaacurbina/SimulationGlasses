@@ -13,33 +13,25 @@ $(function() {
     }, "");
 
     $("#more_blur").click(function() {
+        console.log("#more_blur.click()");
         blurLevelUp();
     });
 
     $("#less_blur").click(function() {
+        console.log("#less_blur.click()");
         blurLevelDown();
     });
 
-    $("#blur_ddm li a").click(function() {
-        var newBlurLevel;
-        if ($(this).html()=="Disabled")
-            newBlurLevel = 0;
-        else
-            newBlurLevel = parseInt($(this).html().substring(6));
-        console.log("New Blur Level: "+newBlurLevel);
-        if (newBlurLevel>currentBlurLevel)
-            blurLevelUp();
-        else
-            blurLevelDown();
-        currentBlurLevel = newBlurLevel;
-    });
-
     var cancelCurrentAnimation = function() {
+        console.log("cancelCurrentAnimation");
         glasses.removeClass("animate down up");
         currentAnimationListener.dispose();
     };
 
     var blurLevelUp = function() {
+        console.log("blurLevelUp");
+        if (currentBlurLevel<3)
+            currentBlurLevel++;
         //if (!glasses.hasClass("up")) {
             cancelCurrentAnimation();
             setTimeout(function() {
@@ -51,9 +43,13 @@ $(function() {
                     });
             }, 1);
         //}
+        changeBarsLevel();
     };
 
     var blurLevelDown = function() {
+        console.log("blurLevelDown");
+        if (currentBlurLevel>0) 
+            currentBlurLevel--;
         //if (!glasses.hasClass("down")) {
             cancelCurrentAnimation();
             setTimeout(function() {
@@ -68,6 +64,7 @@ $(function() {
                     });
             }, 1);
         //}
+        changeBarsLevel();
     };
 
     var oneListener = function($el, events, callback) {
@@ -78,5 +75,18 @@ $(function() {
             }
         };
     };
+
+    var changeBarsLevel= function() {
+        console.log(currentBlurLevel);
+        for (var i=1; i<4; i++) {
+            if (i<=currentBlurLevel)
+                $("#blur_bars").children().eq(i-1).addClass("selected");
+            else
+                $("#blur_bars").children().eq(i-1).removeClass("selected");
+        }
+    }
+
+    var height= parseInt($(".header").height())+parseInt($(".header").css("padding-top"))*2;
+    $(".headerbackground").css("height", height+"px");
 
 });
