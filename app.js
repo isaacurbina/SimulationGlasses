@@ -30,7 +30,7 @@ $(function() {
 
     var blurLevelUp = function() {
         console.log("blurLevelUp");
-        if (currentBlurLevel<3)
+        if (currentBlurLevel<3) {
             currentBlurLevel++;
         //if (!glasses.hasClass("up")) {
             cancelCurrentAnimation();
@@ -43,12 +43,13 @@ $(function() {
                     });
             }, 1);
         //}
-        changeBarsLevel();
+            changeBarsLevel();
+        }
     };
 
     var blurLevelDown = function() {
         console.log("blurLevelDown");
-        if (currentBlurLevel>0) 
+        if (currentBlurLevel>0) {
             currentBlurLevel--;
         //if (!glasses.hasClass("down")) {
             cancelCurrentAnimation();
@@ -64,7 +65,8 @@ $(function() {
                     });
             }, 1);
         //}
-        changeBarsLevel();
+            changeBarsLevel();
+        }
     };
 
     var oneListener = function($el, events, callback) {
