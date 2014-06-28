@@ -1,7 +1,7 @@
 body {
 	font-family: 'Open Sans';
 	font-size: 16px;
-	/*overflow-y: hidden;*/
+	overflow-y: hidden;
 	min-width: 100%;
 	min-height: 100%;
 	margin: 0px;
@@ -22,6 +22,12 @@ input[type=text], button {
 	font-size: 16px;
 }
 
+input[type=text] {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding-left: 10px;
+}
+
 ::-webkit-input-placeholder {
    font-style: italic;
 }
@@ -38,6 +44,7 @@ input[type=text], button {
 	margin-left: -5px;
 	width: 60px;
 	height: 40px;
+	font-size: 18px;
 }
 
 #iframe_container {
@@ -206,11 +213,10 @@ iframe {
     height: 63px;
 }
 
-#url {
+#url, #url_lp {
 	display: inline-block;
 	width: 100%;
 	height: 40px;
-
 }
 
 #btn_ddm {
@@ -252,7 +258,7 @@ iframe {
     left: auto;
 }
 
-#input_url_lp #url {
+#input_url_lp #url_lp {
 	width: 40%;
 }
 
@@ -328,7 +334,7 @@ iframe {
 }
 
 @media only screen and (max-width: 480px) {
-	#url {
+	#url, #url_lp {
 		display: table-cell;
 		width: 100%;
 	}
@@ -363,7 +369,7 @@ iframe {
 		font-size: 24px;
 	}
 
-	#input_url_lp #url {
+	#input_url_lp #url_lp {
 		width: 70%;
 	}
 }
