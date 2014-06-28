@@ -31,7 +31,7 @@ iframe.blur5{
     -webkit-animation-timing-function: easy-in-out;
     -webkit-animation-fill-mode: forwards;
 
-    -webkit-transform: rotateX(90deg) translateZ(-100px);
+    -webkit-transform: rotateX(90deg) translateZ(-400px);
 }
 
 .glasses.down,.glasses.up{

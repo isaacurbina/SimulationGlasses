@@ -5,6 +5,7 @@ $(document).ready(function() {
 
 	if (getURLParameters("q")!=null) {
 		var url= getURLParameters("q");
+		changeIframeURL(url);
 	}
 	
 	$("#go_btn").click(function() {
