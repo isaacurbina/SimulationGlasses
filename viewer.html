@@ -24,17 +24,20 @@
             frame.height = frame.contentWindow.document.body.scrollHeight + "px";
             frame.width = frame.contentWindow.document.body.scrollWidth + "px";*/
             var f= document.getElementById("iframe");
-            f.style.height = f.contentWindow.document.body.scrollHeight*2 + "px";
+            f.style.height = f.contentWindow.document.body.offsetHeight  + "px";
+            //var height= parseInt($(".header").height())+parseInt($(".header").css("padding-top"))*2;
+            //document.body.style.height= parseInt(f.style.height)+63+"px";
+            alert("height of iframe: "+f.style.height);
             //f.style.height = $(document).height()+"px";
         }
     </script>
 </head>
 
-<body onload="ResizeIframe();" style="display:block;">
+<body style="display:block;">
     <div class="header">
         <div id="logo" class="vertical_align">
             <img src="ui/edg_logo.png" id="edg_logo" />
-            <div id="csg_text">Cambridge</br>Simulation </br>Glasses</div>
+            <div id="csg_text">Cambridge</br>Simulation</br>Glasses</div>
         </div>
         <div id="input_url" class="vertical_align">
             <input type="text" id="url" class="url" placeholder="Type the URL here">
@@ -57,9 +60,9 @@
             </div>
         </div>
     </div>
-    <div class="headerbackground"></div>
     <div id="iframe_container">
-        <iframe src="http://www.inclusivedesigntoolkit.com/betterdesign2/csg/csg.html" id="iframe" frameBorder="0" onload="ResizeIframe();">
+        <div class="headerbackground"></div>
+        <iframe src="http://www.inclusivedesigntoolkit.com/betterdesign2/csg/csg.html" id="iframe" frameBorder="0" scrolling="yes" onload="ResizeIframe();">
         </iframe>
     </div>
 
