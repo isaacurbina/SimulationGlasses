@@ -88,7 +88,4 @@ $(function() {
         }
     }
 
-    var height= parseInt($(".header").height())+parseInt($(".header").css("padding-top"))*2;
-    $(".headerbackground").css("height", height+"px");
-
 });

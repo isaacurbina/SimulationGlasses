@@ -53,6 +53,11 @@ $(document).ready(function() {
 
 	$("#iframe").load(function() {
 		$("#iframe").fadeIn(1000);
+		var height= parseInt($(".header").height())+parseInt($(".header").css("padding-top"))*2;
+	    //$(".headerbackground").css("height", height+"px");
+	    $("#iframe").contents().find("body").css("margin", "0px");
+	    $("#iframe").contents().find("body").css("margin-top", height+"px");
+	    $("#iframe").contents().find("body").css("background-color", "black");
 	});
 	
 	$("#iframe_container").css("top", $(".header .row").height()+"px");

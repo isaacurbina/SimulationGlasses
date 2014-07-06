@@ -27,8 +27,7 @@ input[type="submit"]:hover {
 }
 
 input[type=text] {
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
+	border-radius: 10px;
 	padding-left: 10px;
 }
 
@@ -45,10 +44,11 @@ input[type=text] {
 	border-top-left-radius:0px;
 	border-bottom-right-radius:10px;
 	border-top-right-radius:10px;
-	margin-left: -5px;
+	margin-left: -10px;
 	width: 60px;
 	height: 40px;
 	font-size: 18px;
+	border: none;
 }
 
 #iframe_container {
@@ -56,9 +56,6 @@ input[type=text] {
 	height: 100%;
 	border: 0px;
 	display: block;
-	/*position: fixed;
-	top: 0px;
-	left: 0px;*/
 }
 
 #menu {

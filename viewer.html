@@ -18,19 +18,6 @@
     <link rel="stylesheet" type="text/css" href="animation.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
-    <script>
-        function ResizeIframe(){
-            /*var frame = document.getElementById("iframe");
-            frame.height = frame.contentWindow.document.body.scrollHeight + "px";
-            frame.width = frame.contentWindow.document.body.scrollWidth + "px";*/
-            var f= document.getElementById("iframe");
-            f.style.height = f.contentWindow.document.body.offsetHeight  + "px";
-            //var height= parseInt($(".header").height())+parseInt($(".header").css("padding-top"))*2;
-            //document.body.style.height= parseInt(f.style.height)+63+"px";
-            alert("height of iframe: "+f.style.height);
-            //f.style.height = $(document).height()+"px";
-        }
-    </script>
 </head>
 
 <body style="display:block;">
@@ -61,19 +48,11 @@
         </div>
     </div>
     <div id="iframe_container">
-        <div class="headerbackground"></div>
-        <iframe src="http://www.inclusivedesigntoolkit.com/betterdesign2/csg/csg.html" id="iframe" frameBorder="0" scrolling="yes" onload="ResizeIframe();">
+        <iframe src="http://www.inclusivedesigntoolkit.com/betterdesign2/csg/csg.html" id="iframe" frameBorder="0" scrolling="yes">
         </iframe>
     </div>
 
     </br>
-
-    <!--
-    <div id="blur_controls">
-        <img src="ui/more_blur2.png" id="more_blur">
-        <img src="ui/less_blur2.png" id="less_blur">
-    </div>
-    -->
 
     <div id="glasses_container">
         <div class="glasses broke-endless-pages down">
