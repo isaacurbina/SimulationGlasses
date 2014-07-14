@@ -110,6 +110,7 @@ function changeIframeURL(url) {
     	url= "http://"+url;
     	$("#url").val(url);
     }
+    url="/proxy/"+url;
     $("#iframe").fadeOut(1000);
 	$("#iframe").attr("src", url).delay(1000);
 }
