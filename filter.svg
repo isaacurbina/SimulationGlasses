@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="1" height="1" version="1.1"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+  	<filter id="noblur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0" />
+    </filter>
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2 3" />
+    </filter>
+    <filter id="blur1">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2 3" />
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8 9" />
+    </filter>
+    <filter id="blur3">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="14 15" />
+    </filter>
+    <filter id="blur4">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="19 20" />
+    </filter>
+    <filter id="blur5">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="27 28" />
+    </filter>
+  </defs>
+</svg>

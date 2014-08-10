@@ -29,6 +29,7 @@ input[type="submit"]:hover {
 input[type=text] {
 	border-radius: 10px;
 	padding-left: 10px;
+	height: 35px;
 }
 
 ::-webkit-input-placeholder {
@@ -157,7 +158,12 @@ iframe {
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
-	-webkit-filter:blur(3px);
+	filter: blur(3px); 
+	-webkit-filter: blur(3px); 
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px); 
+	-ms-filter: blur(3px);
+	filter: url(filter.svg#blur);
 }
 
 .landing_bkg {
@@ -170,7 +176,10 @@ iframe {
 }
 
 #filter {
-	-webkit-filter: blur(3px);
+	-webkit-filter: blur(3px); 
+	-moz-filter: blur(3px);
+	-o-filter: blur(3px); 
+	-ms-filter: blur(3px);
 	width: 50%;
 	height: 50%;
 	position: absolute;
@@ -207,10 +216,10 @@ iframe {
 	text-align: left;
 	display: inline-flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     box-shadow: 0px 6px 20px 1px rgba(0, 0, 0, 0.60);
-    padding-left: 5%;
-    padding-right: 5%;
+    /*padding-left: 5%;
+    padding-right: 5%;*/
     width: 100%;
     min-height: 50px;
     height: 63px;
@@ -219,7 +228,6 @@ iframe {
 #url, #url_lp {
 	display: inline-block;
 	width: 100%;
-	height: 40px;
 }
 
 #btn_ddm {
@@ -293,11 +301,11 @@ iframe {
 }
 
 .circular_button_txt {
-	margin: -4px;
+	margin: -1px;
 }
 
 #less_blur div {
-	margin-top: -6px;
+	margin-top: -3px;
 }
 
 #blur_bars {
@@ -328,7 +336,7 @@ iframe {
 }
 
 .bar:nth-child(2) {
-	height: 70%%;
+	height: 70%;
 }
 
 .bar:nth-child(3) {
